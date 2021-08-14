@@ -1,56 +1,56 @@
-# Глава 8.2. Подготовка за практически изпит – част II
+# Chapter 8.2. Preparation for practical exam – part II
 
-В настоящата глава ще разгледаме един **практически изпит по основи на програмирането**, проведен в СофтУни на 18 декември 2016 г. Задачите дават добра представа какво можем да очакваме на приемния изпит по програмиране в СофтУни. Изпитът покрива изучавания учебен материал от настоящата книга и от курса "Programming Basics" в СофтУни.
+In this chapter we will look at a **practical exam on basics of programming**, held at SoftUni on December 18, 2016. The exam covers the learning material studied from this book and from the "Programming Basics" course at SoftUni.
 
 
-## Видео
+## Video
 
 <div class="video-player">
-  Гледайте видео-урок по тази глава тук: <a target="_blank"
+  Watch a video tutorial on this chapter here: <a target="_blank"
   href="https://www.youtube.com/watch?v=m9OscwPmZQE">
   https://www.youtube.com/watch?v=m9OscwPmZQE</a>.
 </div>
 <script src="/assets/js/video.js"></script>
 
 
-## Изпитни задачи
+## Exam tasks
 
-Традиционно приемният изпит в СофтУни се състои от **6 практически задачи по програмиране**:
- - Задача с прости сметки (без проверки).
- - Задача с единична проверка.
- - Задача с по-сложни проверки.
- - Задача с единичен цикъл.
- - Задача с вложени цикли (чертане на фигурка на конзолата).
- - Задача с вложени цикли и по-сложна логика.
+Traditionally, the entrance exam in SoftUni consists of **6 practical programming tasks**:
+ - A task with simple calculations (no checks).
+ - A task witrh a single chekc.
+ - A task with more complex checks.
+ - A task with a single loop.
+ - A nested cycle task (Drawing Console Figurine).
+ - A task with nested cycles and more complex logic.
 
-Да разгледаме една **реална изпитна тема**, задачите в нея и решенията им.
+Let's look at a **real exam topic**, its tasks and their solutions.
 
 
-## Задача: разстояние
+## Task: Distance
 
-Напишете програма, която да пресмята **колко километра изминава кола**, за която знаем **първоначалната скорост** \(км/ч\), **времето** в минути, след което **увеличава скоростта с 10%**, **второ време**, след което **намалява скоростта с 5%**, и **времето до края** на пътуването. За да намерите разстоянието трябва да **превърнете минутите в часове** \(например 70 минути = 1.1666 часа\).
+Write a program that calculates **how many kilometers a car travels**, for whick we know **initial speed** \(km/h\), **time** in minutes, then **increases speed by 10%**, **second time**, after whick **decrease speed by 5%**, and **time to the end** of the trip. In order to find the distance you need to **convert minutes into hours** \(e.g. 70 minutes = 1.1666 hours\).
 
-### Входни данни
+### Input
 
-От конзолата се четат **4 реда**:
-* **Първоначалната скорост в км/ч** – цяло число в интервала [**1 … 300**].
-* **Първото време в минути** – цяло число в интервала [**1 … 1000**].
-* **Второто време в минути** – цяло число в интервала [**1 … 1000**].
-* **Третото време в минути** – цяло число в интервала [**1 … 1000**].
+From the console read **4 lines**:
+* **Initial speed in km/h** – integer in the interval [**1 … 300**].
+* **First time in minutes** – integer in the interval [**1 … 1000**].
+* **Second time in minutes** – integer in the interval [**1 … 1000**].
+* **Third time in minutes** – integer in the interval [**1 … 1000**].
 
-### Изходни данни
+### Output
 
-Да се отпечата на конзолата едно число: **изминатите километри**, форматирани до **втория символ след десетичния знак**.
+Print one number on the console: **kilometers travelled**, formatted to **second character after decimal place**.
 
-### Примерен вход и изход
+### Sample input and output
 
-|Вход|Изход|Обяснения|
+|Input|Output|Explanation|
 |-----|-----|-----|
-|90<br>60<br>70<br>80|330.90|**Разстояние с първоначална скорост**: 90 км/ч \* 1 час (60 мин) = **90 км**<br>**След увеличението**: 90 + 10% = 99.00 км/ч \* 1.166 часа (70 мин) = **115.50 км**<br>**След намаляването**: 99 - 5% = 94.05 км/ч \* 1.33 часа (80 мин) = **125.40 км**<br>**Общо изминати**: **330.9 км**|
+|90<br>60<br>70<br>80|330.90|**Distance at initial speed**: 90 km/h \* 1 hour (60 min) = **90 km**<br>**After the increase**: 90 + 10% = 99.00 km/h \* 1.166 hours (70 min) = **115.50 kmм**<br>**After the decrease**: 99 - 5% = 94.05 km/h \* 1.33 hours (80 min) = **125.40 km**<br>**Total travelled**: **330.9 km**|
 
-|Вход|Изход|Обяснения|
+|Input|Output|Explanation|
 |-----|-----|-----|
-|140<br>112<br>75<br>190|917.12|**Разстояние с първоначална скорост**: 140 км/ч \* 1.86 часa (112 мин) = **261.33 км**<br>**След увеличението**: 140 + 10% = 154.00 км/ч \* 1.25 часа (75 мин) = **192.5 км**<br>**След намаляването**: 154.00 - 5% = 146.29 км/ч \* 3.16 часа (190 мин) = **463.28 км**<br>**Общо изминати**: **917.1166 км**|
+|140<br>112<br>75<br>190|917.12|**Distance at initial speed**: 140 km/h \* 1.86 hours (112 min) = **261.33 km**<br>**After the increase**: 140 + 10% = 154.00 km/h \* 1.25 hours (75 min) = **192.5 km**<br>**After the decrease**: 154.00 - 5% = 146.29 km/h \* 3.16 hours (190 min) = **463.28 km**<br>**Total travelled**: **917.1166 km**|
 
 ### Насоки и подсказки
 
